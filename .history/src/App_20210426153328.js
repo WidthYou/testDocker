@@ -15,7 +15,6 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          弟弟对滴滴滴对滴滴滴
           Hello React !!!~~~111
         </a>
       </header>
