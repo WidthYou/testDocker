@@ -15,7 +15,7 @@ script:
   - sudo docker build -t szp666/beiyu:latest .
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
   - sudo docker push szp666/beiyu:latest
-branches:
+branch:
   only:
     - main
     
