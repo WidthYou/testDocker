@@ -13,10 +13,10 @@ script:
   - sudo docker build -t szp666/beiyu:latest .
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
   - sudo docker push szp666/beiyu:latest
-deploy:
-  provider: pages
-  skip_cleanup: true
-  github_token: $tokenForTravis  # Set in the settings page of your repository, as a secure variable
-  keep_history: true
-  on:
-    branch: master
+# deploy:
+#   provider: pages
+#   skip_cleanup: true
+#   github_token: $tokenForTravis  # Set in the settings page of your repository, as a secure variable
+#   keep_history: true
+#   on:
+#     branch: master
