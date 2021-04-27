@@ -1,0 +1,17 @@
+language: node_js
+node_js:
+  - "12"
+services:
+  - docker
+
+before_install:
+  - echo -e "machine github.com\n  login $GITHUB_TOKEN" > ~/.netrc
+  - git lfs pull
+  - yarn install
+  # - composer config --global github-oauth.github.com "$GITHUB_TOKEN"
+
+script:
+  - yarn run build
+  - sudo docker build -t szp666/beiyu:latest .
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+  - sudo docker push szp666/beiyu:latest
