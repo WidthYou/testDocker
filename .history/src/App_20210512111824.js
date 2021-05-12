@@ -7,6 +7,7 @@ import * as ICONS from '@ant-design/icons'
 import { VerifyCode } from './VerifyCode'
 import 'antd/lib/tabs/style'
 import 'antd/lib/button/style'
+import '@formily/antd/build-style'
 
 const normalForm = createForm({
   validateFirst: true,
@@ -29,7 +30,7 @@ const SchemaField = createSchemaField({
     },
   },
 })
-// eslint-disable-next-line 
+
 export default () => {
   return (
     <div

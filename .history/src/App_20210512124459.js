@@ -29,7 +29,6 @@ const SchemaField = createSchemaField({
     },
   },
 })
-// eslint-disable-next-line 
 export default () => {
   return (
     <div
