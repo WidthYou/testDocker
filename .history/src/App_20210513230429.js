@@ -56,7 +56,7 @@ export default () => {
           <div id="flagOpcity" style={{
             opacity: time ? 1 : 0,
             'transitionProperty': 'opacity',
-            'transitionDuration': '3s'
+            'transitionDuration': '2s'
           }}>
             <EyesComponent />
           </div>

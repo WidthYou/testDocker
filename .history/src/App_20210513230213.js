@@ -44,7 +44,7 @@ export default () => {
   }, [])
   useEffect(() => {
     let el = document.getElementById("flagOpcity");
-    el && el.addEventListener('transitionend', function () {
+    el.addEventListener('transitionend', function () {
       setTransitionEnd(false)
     })
     return () => { }
@@ -53,7 +53,7 @@ export default () => {
     <Fragment>
       {
         transitionEnd ? (
-          <div id="flagOpcity" style={{
+          <div style={{
             opacity: time ? 1 : 0,
             'transitionProperty': 'opacity',
             'transitionDuration': '3s'
@@ -63,13 +63,10 @@ export default () => {
         ) : (
             <div
               style={{
-                opacity: transitionEnd ? 0: 1,
                 display: 'flex',
                 justifyContent: 'center',
                 background: '#eee',
                 padding: '40px 0',
-                'transitionProperty': 'opacity',
-                'transitionDuration': '1s'
               }}
             >
               <Card style={{ width: 400 }}>

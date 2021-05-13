@@ -69,7 +69,7 @@ export default () => {
                 background: '#eee',
                 padding: '40px 0',
                 'transitionProperty': 'opacity',
-                'transitionDuration': '1s'
+                'transitionDuration': '.5s'
               }}
             >
               <Card style={{ width: 400 }}>

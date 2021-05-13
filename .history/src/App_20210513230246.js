@@ -63,13 +63,10 @@ export default () => {
         ) : (
             <div
               style={{
-                opacity: transitionEnd ? 0: 1,
                 display: 'flex',
                 justifyContent: 'center',
                 background: '#eee',
                 padding: '40px 0',
-                'transitionProperty': 'opacity',
-                'transitionDuration': '1s'
               }}
             >
               <Card style={{ width: 400 }}>
