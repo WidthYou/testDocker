@@ -44,11 +44,15 @@ export default () => {
   }, [])
   useEffect(() => {
     let el = document.getElementById("flagOpcity");
-    el && el.addEventListener('transitionend', function () {
+    el && el.addEventListener('transitionend', handle)
+    function handle() {
       setTransitionEnd(false)
-    })
-    return () => { }
-  }, [])
+    }
+    return () => { 
+      ele.removeEventListener('transitionend', handle)
+    }
+  }, []);
+  const eyes
   return (
     <Fragment>
       {
