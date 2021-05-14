@@ -14,8 +14,9 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
+    "build1": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -40,6 +41,10 @@
   "devDependencies": {
     "@formily/antd": "^2.0.0-beta.45",
     "antd": "^4.15.5",
-    "moment": "^2.29.1"
+    "customize-cra": "^1.0.0",
+    "less": "^4.1.1",
+    "less-loader": "^5.0.0",
+    "moment": "^2.29.1",
+    "react-app-rewired": "^2.1.8"
   }
 }

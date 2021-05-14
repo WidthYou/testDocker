@@ -4,14 +4,14 @@ node_js:
 services:
   - docker
 
-before_install:
+  before_install:
   - echo -e "machine github.com\n  login $GITHUB_TOKEN" > ~/.netrc
   - git lfs pull
   - npm install
   # - composer config --global github-oauth.github.com "$GITHUB_TOKEN"
 
 script:
-  - npm run build
+  - CI=false npm run build
   - sudo docker build -t szp666/beiyu:latest .
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
   - sudo docker push szp666/beiyu:latest
