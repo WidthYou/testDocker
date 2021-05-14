@@ -7,9 +7,6 @@ services:
 before_install:
   - echo -e "machine github.com\n  login $GITHUB_TOKEN" > ~/.netrc
   - git lfs pull
-  - rm -rf node_modules
-  - rm -rf package-lock.json
-  - npm cache clean --force
   - npm install
   # - composer config --global github-oauth.github.com "$GITHUB_TOKEN"
 
