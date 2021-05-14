@@ -4,5 +4,5 @@ services:
         container_name: my-docker
         image: szp666/beiyu:latest
         ports:
-            - "8082:80"
+            - "8080:80"
         restart: on-failure
