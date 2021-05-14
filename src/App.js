@@ -8,8 +8,7 @@ export default () => {
   const [time, setTime] = useState(true);
   const [transitionEnd, setTransitionEnd] = useState(true)
   useEffect(() => {
-    let timer = null;
-    timer = setTimeout(() => {
+    let timer = setTimeout(() => {
       setTime(false)
     }, 5000)
     return () => {
