@@ -49,7 +49,7 @@ export default () => {
       setTransitionEnd(false)
     }
     return () => { 
-      ele.removeEventListener('transitionend', handle)
+      ele && ele.removeEventListener('transitionend', handle);
     }
   }, []);
   return (
