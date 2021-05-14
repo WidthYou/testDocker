@@ -1,6 +1,7 @@
 import React from 'react'
 import './index.css'
 
+// eslint-disable-next-line 
 export default (props) => {
     return (
         <div className="container">

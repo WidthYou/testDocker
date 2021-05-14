@@ -8,10 +8,12 @@ export default () => {
   const [time, setTime] = useState(true);
   const [transitionEnd, setTransitionEnd] = useState(true)
   useEffect(() => {
-    let timer = setTimeout(() => {
+    let timer = null;
+    timer = setTimeout(() => {
       setTime(false)
     }, 5000)
     return () => {
+      // eslint-disable-next-line 
       timer = null
     }
   }, [])
