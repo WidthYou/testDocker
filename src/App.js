@@ -52,7 +52,6 @@ export default () => {
       ele.removeEventListener('transitionend', handle)
     }
   }, []);
-  const eyes
   return (
     <Fragment>
       {
