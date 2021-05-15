@@ -1,27 +1,45 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Fragment, useEffect, useState } from 'react'
+import EyesComponent from './component/eyesComponent'
+import LoginCom from './component/formLogin'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          WO AI NI ZHONG GUO<br/>
-          Hello React !!!~~~111~~~~~222112222
-        </a>
-        <div>000111100000000</div>
-      </header>
+
+// eslint-disable-next-line 
+export default () => {
+  const [time, setTime] = useState(true);
+  const [transitionEnd, setTransitionEnd] = useState(true)
+  useEffect(() => {
+    let timer = setTimeout(() => {
+      setTime(false)
+    }, 5000)
+    return () => {
+      // eslint-disable-next-line 
+      timer = null
+    }
+  }, [])
+  useEffect(() => {
+    let ele = document.getElementById("flagOpcity");
+    ele && ele.addEventListener('transitionend', handle)
+    function handle() {
+      setTransitionEnd(false)
+    }
+    return () => { 
+      ele && ele.removeEventListener('transitionend', handle);
+    }
+  }, []);
+  const WrapEyesCom = () => (
+    <div id="flagOpcity" style={{
+      opacity: time ? 1 : 0,
+      'transitionProperty': 'opacity',
+      'transitionDuration': '3s'
+    }}>
+      <EyesComponent />
     </div>
-  );
+  )
+  return (
+    <Fragment>
+      {
+        transitionEnd ? WrapEyesCom() : <LoginCom transitionEnd={transitionEnd}/>
+      }
+    </Fragment>
+  )
 }
-
-export default App;
