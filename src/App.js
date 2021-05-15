@@ -38,6 +38,7 @@ export default () => {
   return (
     <Fragment>
       {
+        // transitionEnd ? <WrapEyesCom /> : <LoginCom transitionEnd={transitionEnd}/>
         transitionEnd ? WrapEyesCom() : <LoginCom transitionEnd={transitionEnd}/>
       }
     </Fragment>
